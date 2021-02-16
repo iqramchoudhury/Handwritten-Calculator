@@ -14,7 +14,8 @@ If each operation was hand drawn 50 times, then using various transformations we
 
 The first transformation applied to the dataset is a pixel inversion. This is not to increase the number of unique examples but by inverting the pixel intensities we improve performance due to data centering, (the mean is close to 0). This is explained further in: https://stats.stackexchange.com/questions/220164/impact-of-inverting-grayscale-values-on-mnist-dataset.
 
-
+The second set of transformations applied to the dataset are pixel shifts. This is the first set of transformations used in order to increase the number of unique images.
+Each of the original images is shifted by 1 pixel up, down, left and right. This results in the original dataset of 50 hand drawn images becoming 250 images (including the unshifted images).
 
 
 
