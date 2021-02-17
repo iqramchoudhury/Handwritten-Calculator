@@ -19,5 +19,6 @@ Each of the original images is shifted by 1 pixel up, down, left and right. This
 
 The next transformation is vertically flipping every image. Since all the operations should be vertically symmetric, by flipping them along the horizontal axis we can double the number of images from 250 to 500.
 
-The final transformation I performed was a rotation. Each image was rotated 10 degrees clockwise and 10 degrees anticlockwise. This tripled the number of images (inlcuding the unrotated images).
+The last transformation I performed was a rotation. Each image was rotated 10 degrees clockwise and 10 degrees anticlockwise. This tripled the number of images (inlcuding the unrotated images).
 
+The final step was to repeat this dataset 4 times in order for a similar representation of the operations as the numbers in the MNIST dataset, join the two datasets and then shuffle them.
