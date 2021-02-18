@@ -12,33 +12,33 @@ The MNIST dataset consists of 60,000 28x28 grayscale images of the digits 0-9, a
 
 If each operation was hand drawn 50 times, then using various transformations (discussed later) we could turn the 50 images to 1500 unique images of each operation. This would mean we could repeat each unique image just 4 times in order to get a somewhat similar representation of each operation to the representation of each number in the MNIST dataset. In my opinion repeating each image 4 times was acceptably low. Considering the final accuracy of the trained model on the test set was 0.9921, the time required to hand draw more operations would not be worth the marginal increase in accuracy.
 
-The first transformation applied to the dataset is a pixel inversion. This is not to increase the number of unique examples but by inverting the pixel intensities we improve performance due to data centering, (the mean is close to 0). This is explained further in: https://stats.stackexchange.com/questions/220164/impact-of-inverting-grayscale-values-on-mnist-dataset.
+The first transformation applied to the dataset is a pixel inversion. This is not to increase the number of unique examples, but by inverting the pixel intensities we improve performance due to data centering, (the mean is close to 0). This is explained further in: https://stats.stackexchange.com/questions/220164/impact-of-inverting-grayscale-values-on-mnist-dataset.
 
 The second set of transformations applied to the dataset are pixel shifts. This is the first set of transformations used in order to increase the number of unique images.
 Each of the original images is shifted by 1 pixel up, down, left and right. This results in the original dataset of 50 hand drawn images becoming 250 images (including the unshifted images).
 
 The next transformation is vertically flipping every image. Since all the operations should be vertically symmetric, by flipping them along the horizontal axis we can double the number of images from 250 to 500.
 
-The last transformation I performed was a rotation. Each image was rotated 10 degrees clockwise and 10 degrees anticlockwise. This tripled the number of images (inlcuding the unrotated images).
+The last transformation I performed was a rotation. Each image was rotated 10 degrees clockwise and 10 degrees anticlockwise. This tripled the number of images (inlcuding the un-rotated images).
 
 
 ***Visualisation of Transformations***
 ![Diagram of Transformations](Images/Transformations.png "Diagram of Transformations")
-The final step was to repeat this dataset 4 times in order for a similar representation of the operations as the numbers in the MNIST dataset, join the two datasets and then shuffle them.
+The final step was to repeat this dataset 4 times in order for a similar representation of the operations as the numbers in the MNIST dataset; join the two datasets and lastly shuffle them.
 
 
 ## 2. Training the Model
 The architecture I chose to use in my neural network is based on Yann LeCunn's LeNet-5: http://yann.lecun.com/exdb/lenet/index.html.
-It is possibley the most widely known CNN architecture and results in a very high accuracy.
+It is possibley the most widely known CNN architecture and results in a very high accuracy. Due to the high accuracy, It does not make sense to deviate from the architecture of LeNet-5 in this situation.
 
 ***Neural Network Architecture***
 
 ![Neural Network Architecture](Images/Architecture.png "Architecture based on LeNet-5")
 
 There are a few details to be noted about LeNet-5:
-* The images in our dataset are 28x28 pixels, but they are zero padded to 32x32 and normalised before being fed to the network.
+* The images in our dataset are 28x28 pixels, but they are zero padded to 32x32 and normalised before being fed into the network.
 * We use average pooling instead of the more common max pooling.
-* Each output neuron outputs the square of the Euclidian distance between its input vector and weight vector rather than computing the matrix multiplcation of the inputs and the weight vector.
+* Each output neuron outputs the square of the Euclidian distance between its input vector and weight vector, rather than computing the matrix multiplcation of the inputs and the weight vector.
 
 
 ## 3. Creating the GUI
