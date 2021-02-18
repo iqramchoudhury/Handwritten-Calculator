@@ -21,6 +21,7 @@ The next transformation is vertically flipping every image. Since all the operat
 
 The last transformation I performed was a rotation. Each image was rotated 10 degrees clockwise and 10 degrees anticlockwise. This tripled the number of images (inlcuding the unrotated images).
 
- ![Diagram of Transformations](Images/Transformations.png "Diagram of Transformations")
+![Diagram of Transformations](Images/Transformations.png "Diagram of Transformations")
+*Visualisation of Transformations*
 
 The final step was to repeat this dataset 4 times in order for a similar representation of the operations as the numbers in the MNIST dataset, join the two datasets and then shuffle them.
