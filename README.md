@@ -32,9 +32,13 @@ The final step was to repeat this dataset 4 times in order for a similar represe
 The architecture I chose to use in my neural network is based on Yann LeCunn's LeNet-5: http://yann.lecun.com/exdb/lenet/index.html.
 It is possibley the most widely known CNN architecture and results in a very high accuracy.
 
+***Neural Network Architecture***
+![Neural Network Architecture](Images/Model Architecture.png "Architecture based on LeNet-5")
+
 There are a few details to be noted about LeNet-5:
 * The images in our dataset are 28x28 pixels, but they are zero padded to 32x32 and normalised before being fed to the network.
 * We use average pooling instead of the more common max pooling.
 * Each output neuron outputs the square of the Euclidian distance between its input vector and weight vector rather than computing the matrix multiplcation of the inputs and the weight vector.
 
 
+Model Architecture
