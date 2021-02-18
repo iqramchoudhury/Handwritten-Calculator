@@ -43,4 +43,6 @@ There are a few details to be noted about LeNet-5:
 
 
 ## 3. Creating the GUI
-*(coming soon)*
+![Image of Calculator](Images/Calculator.png "Image of Calculator")
+
+*(code coming soon)*
