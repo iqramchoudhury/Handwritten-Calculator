@@ -33,6 +33,7 @@ The architecture I chose to use in my neural network is based on Yann LeCunn's L
 It is possibley the most widely known CNN architecture and results in a very high accuracy.
 
 ***Neural Network Architecture***
+
 ![Neural Network Architecture](Images/Architecture.png "Architecture based on LeNet-5")
 
 There are a few details to be noted about LeNet-5:
