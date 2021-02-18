@@ -7,6 +7,7 @@ Many handwritten calculators based on the MNIST dataset have been created by ama
 I have split the problem into three parts: creating the dataset, training the model and then finally building the GUI. Feel free to only read the parts that you are interested in.
 However, this was written in mind that you read it sequentially, therefore in order to fully understand why things are done the way they are, it is best to read from start to finish.
 
+
 ## 1. Creating the Dataset
 The MNIST dataset consists of 60,000 28x28 grayscale images of the digits 0-9, along with a test set of 10,000 images. My first aim was to create a dataset of operations I intended to use in my calculator. The operations I chose to use were: +, -, *, /, (, ). The final dataset had to be of comparable size to that in the MNIST datset - so not to bias the trained neural network. 
 
@@ -25,3 +26,15 @@ The last transformation I performed was a rotation. Each image was rotated 10 de
 ***Visualisation of Transformations***
 ![Diagram of Transformations](Images/Transformations.png "Diagram of Transformations")
 The final step was to repeat this dataset 4 times in order for a similar representation of the operations as the numbers in the MNIST dataset, join the two datasets and then shuffle them.
+
+
+## 2. Training the Model
+The architecture I chose to use in my neural network is based on Yann LeCunn's LeNet-5: http://yann.lecun.com/exdb/lenet/index.html.
+It is possibley the most widely known CNN architecture and results in a very high accuracy.
+
+There are a few details to be noted about LeNet-5:
+* The images in our dataset are 28x28 pixels, but they are zero padded to 32x32 and normalised before being fed to the network.
+* We use average pooling instead of the more common max pooling.
+* Each output neuron outputs the square of the Euclidian distance between its input vector and weight vector rather than computing the matrix multiplcation of the inputs and the weight vector.
+
+
