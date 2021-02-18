@@ -42,5 +42,5 @@ There are a few details to be noted about LeNet-5:
 * Each output neuron outputs the square of the Euclidian distance between its input vector and weight vector rather than computing the matrix multiplcation of the inputs and the weight vector.
 
 
-## 2. Creating the GUI
+## 3. Creating the GUI
 *(coming soon)*
