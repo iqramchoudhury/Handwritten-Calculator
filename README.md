@@ -40,6 +40,7 @@ There are a few details to be noted about LeNet-5:
 * We use average pooling instead of the more common max pooling.
 * Each output neuron outputs the square of the Euclidian distance between its input vector and weight vector, rather than computing the matrix multiplcation of the inputs and the weight vector.
 
+Using a training set size of 70,000, a validation set size of 20,000 and test set size of 16,000. This model achieved an accuracy of 0.9921 when evaluating on the test set. This was a level of accuracy I was looking for, so I didn't use gridsearchcv to find more optimal parameters.
 
 ## 3. Creating the GUI
 ![Image of Calculator](Images/Calculator.png "Image of Calculator")
