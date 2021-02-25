@@ -44,4 +44,7 @@ Using a training set size of 70,000, a validation set size of 20,000 and test se
 ## 3. Creating the GUI
 ![Image of Calculator](Images/Calculator.png "Image of Calculator")
 
-*(code coming soon)*
+*(GIF coming soon)*
+
+With regards to what GUI to use, there are two options available: Tkinter or PySimpleGUI. I chose to do the latter because in my opinion the code is a lot cleaner visually.
+The font for the calculator window can be found at: https://www.1001fonts.com/digital-7-font.html.
