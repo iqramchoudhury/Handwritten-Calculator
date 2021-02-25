@@ -47,4 +47,8 @@ Using a training set size of 70,000, a validation set size of 20,000 and test se
 *(GIF coming soon)*
 
 With regards to what GUI to use, there are two options available: Tkinter or PySimpleGUI. I chose to do the latter because in my opinion the code is a lot cleaner visually.
-The font for the calculator window can be found at: https://www.1001fonts.com/digital-7-font.html.
+The GUI is composed of 4 windows, from top to bottom: the calculator name, the  calculator display, the canvas to draw on and the clear canvas button. 
+
+In order to identify and separate each symbol I have used connected components labelling. This is why I had to use '/' for division instead of the conventional symbol. A better and more 'state of the art' way to classify multiple images on one image would be to use the you-only-look-once algorithm.
+The font for the calculator display window can be found at: https://www.1001fonts.com/digital-7-font.html.
+
