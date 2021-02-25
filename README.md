@@ -14,9 +14,9 @@ If each operation was hand drawn 50 times, then using various transformations (d
 
 The first transformation applied to the dataset is a pixel inversion. This is not to increase the number of unique examples, but by inverting the pixel intensities we improve performance due to data centering, (the mean is close to 0). This is explained further in: https://stats.stackexchange.com/questions/220164/impact-of-inverting-grayscale-values-on-mnist-dataset.
 
-The second transformation is vertically flipping every image. This was achieved by flipping them along the horizontal axis, thus we can double the number of images from 50 to 100 (including the unflipped images). The divide symbol used is '/', this is obviously not vertically symmetric. Therefore, the divide symbols were flipped along the vertical axis too, (in essence a 180 degree rotation).
+The second transformation is vertically flipping every image. This was achieved by flipping them along the horizontal axis, thus we can double the number of images in the original dataset from 50 to 100 (including the unflipped images). The divide symbol used is '/', this is obviously not vertically symmetric. Therefore, the divide symbols were flipped along the vertical axis too, (in essence a 180 degree rotation).
 
-The next set of transformations applied to the dataset are pixel shifts. Each of the original images is shifted by 1 pixel up, down, left and right. This results in the original dataset of 50 hand drawn images becoming 250 images (including the unshifted images).
+The next set of transformations applied to the dataset are pixel shifts. Each of the original images is shifted by 1 pixel up, down, left and right. This results in the dataset of 100 images becoming 500 images (including the unshifted images).
 
 The last transformation I performed was a rotation. Each image was rotated 10 degrees clockwise and 10 degrees anticlockwise. This tripled the number of images (inlcuding the un-rotated images).
 
