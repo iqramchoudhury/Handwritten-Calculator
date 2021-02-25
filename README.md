@@ -10,14 +10,13 @@ I have split the problem into three parts: creating the dataset, training the mo
 ## 1. Creating the Dataset
 The MNIST dataset consists of 60,000 28x28 grayscale images of the digits 0-9, along with a test set of 10,000 images. My first aim was to create a dataset of operations I intended to use in my calculator. The operations I chose to use were: +, -, *, /, (, ). The final dataset had to be of comparable size to that in the MNIST datset - so not to bias the trained neural network. 
 
-If each operation was hand drawn 50 times, then using various transformations (discussed later) we could turn the 50 images to 1500 unique images of each operation. This would mean we could repeat each unique image just 4 times in order to get a somewhat similar representation of each operation to the representation of each number in the MNIST dataset. In my opinion repeating each image 4 times was acceptably low. Considering the final accuracy of the trained model on the test set was 0.9921, the time required to hand draw more operations would not be worth the marginal increase in accuracy.
+If each operation was hand drawn 50 times, then using various transformations (discussed later) we could turn the 50 images to 1500 unique images of each operation. This would mean we could repeat each unique image just 4 times in order to get a somewhat similar representation of each operation to the representation of each number in the MNIST dataset. In my opinion repeating each image 4 times was acceptably low. Considering the final accuracy of the trained model on the test set was 0.9941, the time required to hand draw more operations would not be worth the marginal increase in accuracy.
 
 The first transformation applied to the dataset is a pixel inversion. This is not to increase the number of unique examples, but by inverting the pixel intensities we improve performance due to data centering, (the mean is close to 0). This is explained further in: https://stats.stackexchange.com/questions/220164/impact-of-inverting-grayscale-values-on-mnist-dataset.
 
-The second set of transformations applied to the dataset are pixel shifts. This is the first set of transformations used in order to increase the number of unique images.
-Each of the original images is shifted by 1 pixel up, down, left and right. This results in the original dataset of 50 hand drawn images becoming 250 images (including the unshifted images).
+The second transformation is vertically flipping every image. This was achieved by flipping them along the horizontal axis, thus we can double the number of images from 50 to 100 (including the unflipped images). The divide symbol used is '/', this is obviously not vertically symmetric. Therefore, the divide symbols were flipped along the vertical axis too, (in essence a 180 degree rotation).
 
-The next transformation is vertically flipping every image. Since all the operations should be vertically symmetric, by flipping them along the horizontal axis we can double the number of images from 250 to 500.
+The next set of transformations applied to the dataset are pixel shifts. Each of the original images is shifted by 1 pixel up, down, left and right. This results in the original dataset of 50 hand drawn images becoming 250 images (including the unshifted images).
 
 The last transformation I performed was a rotation. Each image was rotated 10 degrees clockwise and 10 degrees anticlockwise. This tripled the number of images (inlcuding the un-rotated images).
 
@@ -40,7 +39,7 @@ There are a few details to be noted about LeNet-5:
 * We use average pooling instead of the more common max pooling.
 * Each output neuron outputs the square of the Euclidian distance between its input vector and weight vector, rather than computing the matrix multiplcation of the inputs and the weight vector.
 
-Using a training set size of 70,000, a validation set size of 20,000 and test set size of 16,000. This model achieved an accuracy of 0.9921 when evaluating on the test set. This was a level of accuracy I was looking for, so I didn't use gridsearchcv to find more optimal parameters.
+Using a training set size of 70,000, a validation set size of 20,000 and test set size of 16,000. This model achieved an accuracy of 0.9941 when evaluating on the test set. This was a level of accuracy I was looking for, so I didn't use gridsearchcv to find more optimal parameters.
 
 ## 3. Creating the GUI
 ![Image of Calculator](Images/Calculator.png "Image of Calculator")
