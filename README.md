@@ -23,7 +23,7 @@ The last transformation I performed was a rotation. Each image was rotated 10 de
 
 ***Visualisation of Transformations***
 ![Diagram of Transformations](Images/Transformations.png "Diagram of Transformations")
-The final step was to repeat this dataset 4 times in order for a similar representation of the operations as the numbers in the MNIST dataset; join the two datasets and lastly shuffle them.
+The final step was to repeat this dataset 4 times in order for a similar representation of the operations as the numbers in the MNIST dataset, join the two datasets and lastly shuffle them.
 
 
 ## 2. Training the Model
