@@ -55,6 +55,6 @@ Once the model has predicted each symbol, the operation is calculated and the di
 
 ## 4. Further Information
 
-*When creating this application a lot of ideas were influenced by the following implementation: https://github.com/irfanchahyadi/Handwriting-Calculator 
-*The font for the calculator display window can be found at: https://www.1001fonts.com/digital-7-font.html.
+* When creating this application a lot of ideas were influenced by the following implementation: https://github.com/irfanchahyadi/Handwriting-Calculator 
+* The font for the calculator display window can be found at: https://www.1001fonts.com/digital-7-font.html.
 
