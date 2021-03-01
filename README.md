@@ -44,4 +44,17 @@ Using a training set size of 70,000, a validation set size of 20,000 and test se
 ## 3. Creating the GUI
 ![Image of Calculator](Images/Calculator.png "Image of Calculator")
 
-*(code coming soon)*
+*(GIF coming soon)*
+
+With regards to what GUI to use, there are two options available: Tkinter or PySimpleGUI. I chose to do the latter because in my opinion the code is a lot cleaner visually.
+The GUI is composed of 4 windows, from top to bottom: the calculator name, the  calculator display, the canvas to draw on and the clear canvas button. 
+
+In order to identify and separate each symbol drawn, I have used connected components labelling. This is why I had to use '/' for division instead of the conventional symbol. A better and more 'state of the art' way to classify multiple images in a single image would be to use the You-Only-Look-Once (YOLO) algorithm. I did not choose to do this because connected components labelling works fine in my situation as all the symbols used are made up of a single block. If I were to include '=' as one of the symbols I would then have to use YOLO as the method for identification.
+
+Once the model has predicted each symbol, the operation is calculated and the display window updated.
+
+## 4. Further Information
+
+* When creating this application a lot of ideas were influenced by the following implementation: https://github.com/irfanchahyadi/Handwriting-Calculator 
+* The font for the calculator display window can be found at: https://www.1001fonts.com/digital-7-font.html
+
