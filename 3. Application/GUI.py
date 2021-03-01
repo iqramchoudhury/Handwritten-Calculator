@@ -1,4 +1,5 @@
 import PySimpleGUI as sg 
+import numpy as np
 from PIL import ImageGrab
 import utils
 
@@ -38,7 +39,7 @@ def get_canvas():
 def translate_canvas(image):
     """Return string of symbols from multiple handwritten symbols
     on the input image."""
-    # nums = []
+    nums = []
     imgs_ok = []
     cxs = []
     imgs = utils.thresholding(image, CANVAS_WIDTH, CANVAS_HEIGHT)
@@ -50,15 +51,16 @@ def translate_canvas(image):
         img = utils.image_resize(img)
         img = utils.image_centering(img)
         img = utils.image_pad(img)
-		num = utils.predict(img)
-		nums.append(num)
+        img = img.astype(np.float32)
+        num = utils.predict(img)
+        nums.append(num)
         imgs_ok.append(img)
         cxs.append(cx)
-	nums = utils.sort_by_other_list(nums, cxs)
-	imgs_ok = utils.sort_by_other_list(imgs_ok, cxs)
-	calculation = ''.join(nums)
-	display = utils.calculate(calculation)
-	return display
+    nums = utils.sort_by_other_list(nums, cxs)
+    imgs_ok = utils.sort_by_other_list(imgs_ok, cxs)
+    calculation = ''.join(nums)
+    display = utils.calculate(calculation)
+    return display
 
 #CLICK EVENTS
 def clear_click():

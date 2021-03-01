@@ -123,9 +123,9 @@ def save_image_as_file(img):
 
 def predict(img):
 	"""Run model.predict from keras model, and interpret it's symbol."""
-	img = img.reshape(28,28,1)
-	img = np.pad(img, ((2,2),(2,2),(0,0)))
-	num = model.predict(img)
+	img = img.reshape(1,32,32,1)
+	predictions = model.predict(img)
+	num = np.argmax(predictions)
 	if num >= 10:
 		num = MAP_SYMBOLS[num]
 	num = str(num)
