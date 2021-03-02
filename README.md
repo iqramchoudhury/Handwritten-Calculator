@@ -45,10 +45,6 @@ There are a few details to be noted about LeNet-5:
 Using a training set size of 70,000, a validation set size of 20,000 and test set size of 16,000. This model achieved an accuracy of 0.9941 when evaluating on the test set. This was a level of accuracy I was looking for, so I didn't use gridsearchcv to find more optimal parameters.
 
 ## 3. Creating the GUI
-![Image of Calculator](Images/Calculator.png "Image of Calculator")
-
-*(GIF coming soon)*
-
 With regards to what GUI to use, there are two options available: Tkinter or PySimpleGUI. I chose to do the latter because in my opinion the code is a lot cleaner visually.
 The GUI is composed of 4 windows, from top to bottom: the calculator name, the  calculator display, the canvas to draw on and the clear canvas button. 
 
