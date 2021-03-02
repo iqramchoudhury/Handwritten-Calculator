@@ -53,7 +53,6 @@ In order to separate each symbol drawn, I have used connected components labelli
 Once the symbols have been separated using connected componenets labelling, they are preprocessed in order for them to be in a suitable format for the CNN. The CNN then predicts the identity of each of the symbols, the operation is calculated  and the calculator display window is updated with the result. 
 
 ## 4. Further Information
-
 * When creating this application a lot of ideas were influenced by the following implementation: https://github.com/irfanchahyadi/Handwriting-Calculator
 * The GUI's aesthetic was inspired by this calculator: https://github.com/israel-dryer/PyDataMath-II
 * The font for the calculator display window can be found at: https://www.1001fonts.com/digital-7-font.html
