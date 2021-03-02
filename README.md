@@ -1,6 +1,9 @@
 # Handwritten-Calculator
 Calculates hand written operations using a convolutional neural network trained on the MNIST dataset.
 
+## Example
+![GIF of Calculator](Images/GIF.gif "GIF of Calculator")
+
 ## Introduction
 Many handwritten calculators based on the MNIST dataset have been created by amateur machine learning enthusiasts and are available online. However, none follow a rigorous approach to the problem, which I have attempted to do in the following implementation. This repository will show you step by step how to create such an application: from the data augmentation for the calculator symbols, to creating the user interface using PySimpleGUI.
 
