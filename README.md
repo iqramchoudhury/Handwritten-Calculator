@@ -30,7 +30,7 @@ The final step was to repeat this dataset 4 times in order for a similar represe
 
 ## 2. Training the Model
 The architecture I chose to use in my neural network is based on Yann LeCunn's LeNet-5: http://yann.lecun.com/exdb/lenet/index.html.
-It is possibley the most widely known CNN architecture and results in a very high accuracy. Due to the high accuracy, it does not make sense to deviate from the architecture of LeNet-5 in this situation.
+It is possibly the most widely known CNN architecture and results in a very high accuracy. Due to the high accuracy, it does not make sense to deviate from the architecture of LeNet-5 in this situation.
 
 ***Neural Network Architecture***
 
