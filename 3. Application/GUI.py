@@ -62,12 +62,6 @@ def translate_canvas(image):
     display = utils.calculate(calculation)
     return display
 
-#CLICK EVENTS
-def clear_click():
-    global var
-    var['front'].clear()
-    var['back'].clear()
-
 #EVENT LOOP
 while True:
     event, values = window.read()
@@ -76,17 +70,14 @@ while True:
         break # exit
 
     if event == 'Clr':
-        clear_click()
         update_display(0.0000)
-        var['result'] = 0.0000
-        window['_CANVAS_'].draw_rectangle(top_left=(0,CANVAS_HEIGHT), bottom_right=(CANVAS_WIDTH,0), fill_color='white')
+        window['_CANVAS_'].erase()
 
     if event == '_CANVAS_':   
         x, y = values["_CANVAS_"]
         window['_CANVAS_'].draw_point((x,y), size=8)
 
     if event.endswith('+UP'):
-        x, y = values["_CANVAS_"]
         image = get_canvas()
         display = translate_canvas(image)
         update_display(display)
